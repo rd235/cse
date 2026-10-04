@@ -1,8 +1,3 @@
----
-geometry: margin=2.5cm
-output: pdf_document
----
-
 # TCPigeon
 
 Un principe e una principessa vivono reclusi in due torri lontane.
