@@ -51,7 +51,7 @@ Quando un piccione arriva all'ufficiale destinatario:
 * se il numero di sequenza è uguale al numero di parole già consegnate più uno:
     * consegna la parola;
     * incrementa il contatore delle parole consegnate;
-    * continua a consegnare le eventuali parole già arrivate e messe da parte, finché è presente il foglietto con numero di sequenza uguale al nuovo valore del contatore più uno;
+    * continua a consegnare le eventuali parole già arrivate e messe da parte, finché è presente il foglietto con numero di sequenza uguale al nuovo valore del contatore più uno, sepre aggiornando il contatore di parole consegnate;
 * altrimenti, mette da parte il foglietto in attesa che arrivino quelli mancanti.
 
 **(Gioco #1)**
