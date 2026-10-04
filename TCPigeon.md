@@ -26,6 +26,8 @@ L'ufficiale che riceve un piccione consegna immediatamente la parola al principe
 
 **(Gioco #0)**
 
+![foglietto-0](fogli/foglietto-0.png)
+
 ## Piccioni bavaresi
 
 I piccioni bavaresi non vengono colpiti dai cacciatori, ma, a causa della troppa birra che talvolta consumano, possono perdersi e arrivare in ritardo. I foglietti possono quindi essere consegnati in un ordine diverso da quello di spedizione.
@@ -55,6 +57,9 @@ Quando un piccione arriva all'ufficiale destinatario:
 * altrimenti, mette da parte il foglietto in attesa che arrivino quelli mancanti.
 
 **(Gioco #1)**
+
+![foglietto-1](fogli/foglietto-1.png)
+![tabella-in-123](fogli/tabella-in-123.png)
 
 ## Piccioni piccioni
 
@@ -151,6 +156,10 @@ Quando è trascorso un minuto, il piccione si sposta alla tappa successiva. Se r
 
 **(Gioco #2)**
 
+![foglietto-2](fogli/foglietto-2.png)
+![tabella-in-123](fogli/tabella-in-123.png)
+![tabella-out-23](fogli/tabella-out-23.png)
+
 ## Piccioni sindacalizzati
 
 Il problema sembra risolto e il metodo funziona. Purtroppo, però, i nostri ufficiali devono affrontare la rivolta dei piccioni, costretti a fare troppi viaggi avanti e indietro.
@@ -227,6 +236,10 @@ Quando è trascorso un minuto, il piccione si sposta alla tappa successiva. Se r
 
 **(Gioco #3)**
 
+![foglietto-3](fogli/foglietto-3.png)
+![tabella-in-123](fogli/tabella-in-123.png)
+![tabella-out-23](fogli/tabella-out-23.png)
+
 ## Cosa c'entra tutto questo?
 
 Non è un caso che la famiglia di protocolli che consente a Internet di funzionare si chiami **TCP/IP**.
@@ -294,6 +307,9 @@ In TCPigeon abbiamo scelto di lavorare con **sequenze di parole**, anziché con 
 In questo modo i numeri di sequenza restano piccoli e facilmente gestibili durante il gioco, senza dover contare i caratteri o preoccuparsi di come suddividere una sequenza di byte nei diversi pacchetti.
 
 TCPigeon non è quindi una riproduzione completa di TCP, ma un modello semplificato che permette di sperimentare alcune delle idee fondamentali alla base della comunicazione affidabile costruita sopra un servizio di rete che, da solo, non offre garanzie di consegna, ordine o assenza di duplicati.
+
+### per stampare il materiale:
+[foglietti\_tabelle.pdf](fogli/foglietti_tabelle.pdf)
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org)
