@@ -151,7 +151,7 @@ Quando è trascorso un minuto, il piccione si sposta alla tappa successiva. Se r
 
 **(Gioco #2)**
 
-# Piccioni sindacalizzati
+## Piccioni sindacalizzati
 
 Il problema sembra risolto e il metodo funziona. Purtroppo, però, i nostri ufficiali devono affrontare la rivolta dei piccioni, costretti a fare troppi viaggi avanti e indietro.
 
@@ -229,52 +229,33 @@ Quando è trascorso un minuto, il piccione si sposta alla tappa successiva. Se r
 
 ## Cosa c'entra tutto questo?
 
-Non è un caso che la famiglia di protocolli che consente a Internet di
-funzionare si chiami **TCP/IP**.
+Non è un caso che la famiglia di protocolli che consente a Internet di funzionare si chiami **TCP/IP**.
 
-I protocolli di Internet vengono descritti nei documenti pubblicati dalla
-**IETF** (*Internet Engineering Task Force*), chiamati **RFC** (*Request for
-Comments*). Le RFC sono ormai migliaia, ma **IP** e **TCP** svolgono ancora
-un ruolo centrale.
+I protocolli di Internet vengono descritti nei documenti pubblicati dalla **IETF** (*Internet Engineering Task Force*), chiamati **RFC** (*Request for Comments*). Le RFC sono ormai migliaia, ma **IP** e **TCP** svolgono ancora un ruolo centrale.
 
 ### IP: consegnare pacchetti attraverso Internet
 
 IP è il cuore dell'infrastruttura di rete: il suo nome significa **Internet Protocol**.
 
-Grazie a IP viene realizzata l'astrazione di **internetwork**: un insieme di
-reti collegate tra loro che, dal punto di vista di chi le utilizza, si comporta
-come se fosse un'unica grande rete.
+Grazie a IP viene realizzata l'astrazione di **internetwork**: un insieme di reti collegate tra loro che, dal punto di vista di chi le utilizza, si comporta come se fosse un'unica grande rete.
 
-Affidando a Internet un *pacchetto*, una breve sequenza di byte, e
-specificando un indirizzo di destinazione, normalmente ci si aspetta che il
-pacchetto venga consegnato a destinazione in un tempo compatibile con gli scopi
-della comunicazione, se il destinatario è raggiungibile.
+Affidando a Internet un *pacchetto*, una breve sequenza di byte, e specificando un indirizzo di destinazione, normalmente ci si aspetta che il pacchetto venga consegnato a destinazione in un tempo compatibile con gli scopi della comunicazione, se il destinatario è raggiungibile.
 
 È un po' come compilare una cartolina e imbucarla.
 
-Se l'indirizzo di destinazione è corretto, ci si aspetta che la cartolina venga
-recapitata nella cassetta delle lettere del destinatario, che potrà leggere il
-messaggio, per esempio:
+Se l'indirizzo di destinazione è corretto, ci si aspetta che la cartolina venga recapitata nella cassetta delle lettere del destinatario, che potrà leggere il messaggio, per esempio:
 
 > Saluti da Bologna
 
-Può capitare che una cartolina venga perduta o che impieghi molto tempo per
-essere recapitata, ma normalmente arriva a destinazione.
+Può capitare che una cartolina venga perduta o che impieghi molto tempo per essere recapitata, ma normalmente arriva a destinazione.
 
-Una volta imbucata e presa in carico dal servizio postale, non sappiamo quale
-percorso seguirà: potrebbe essere trasportata in treno, in aereo, via nave o in
-camion. Queste informazioni non interessano né al mittente né al destinatario:
-ciò che conta è che la cartolina arrivi a destinazione in tempo utile.
+Una volta imbucata e presa in carico dal servizio postale, non sappiamo quale percorso seguirà: potrebbe essere trasportata in treno, in aereo, via nave o in camion. Queste informazioni non interessano né al mittente né al destinatario: ciò che conta è che la cartolina arrivi a destinazione in tempo utile.
 
-Allo stesso modo, un pacchetto IP viene smistato e fatto transitare attraverso
-le diverse reti che compongono Internet fino a raggiungere la destinazione. I
-dettagli del percorso interessano soprattutto a chi progetta e implementa i
-servizi e le infrastrutture di rete, non a chi utilizza IP.
+Allo stesso modo, un pacchetto IP viene smistato e fatto transitare attraverso le diverse reti che compongono Internet fino a raggiungere la destinazione. I dettagli del percorso interessano soprattutto a chi progetta e implementa i servizi e le infrastrutture di rete, non a chi utilizza IP.
 
 ### TCP: rendere affidabile la comunicazione
 
-**TCP** (*Transmission Control Protocol*) è il protocollo che consente di
-instaurare un dialogo affidabile tra due interlocutori.
+**TCP** (*Transmission Control Protocol*) è il protocollo che consente di instaurare un dialogo affidabile tra due interlocutori.
 
 In particolare:
 
@@ -289,9 +270,7 @@ in ciascuna sequenza ricevuta non ci sono byte mancanti;
 
 È proprio quest'ultimo punto quello che abbiamo affrontato con **TCPigeon**:
 
-> **Come è possibile realizzare un servizio affidabile di comunicazione di
-sequenze (TCP) utilizzando un servizio inaffidabile di comunicazione di
-pacchetti (IP)?**
+> **Come è possibile realizzare un servizio affidabile di comunicazione di sequenze (TCP) utilizzando un servizio inaffidabile di comunicazione di pacchetti (IP)?**
 
 ### TCPigeon e TCP/IP
 
@@ -304,26 +283,17 @@ In TCPigeon:
 
 Nel TCP reale, gli elementi della sequenza trasmessa sono **byte**, non parole.
 
-Quando ci sono molti byte da trasferire, TCP li organizza in segmenti che
-vengono trasportati all'interno di pacchetti IP, fino a rispettare la
-dimensione massima consentita. Anche il numero di sequenza utilizzato da TCP è
-espresso in termini di byte.
+Quando ci sono molti byte da trasferire, TCP li organizza in segmenti che vengono trasportati all'interno di pacchetti IP, fino a rispettare la dimensione massima consentita. Anche il numero di sequenza utilizzato da TCP è espresso in termini di byte.
 
-In TCPigeon abbiamo scelto di lavorare con **sequenze di parole**, anziché con
-byte o caratteri, per rendere più semplici da comprendere i concetti di:
+In TCPigeon abbiamo scelto di lavorare con **sequenze di parole**, anziché con byte o caratteri, per rendere più semplici da comprendere i concetti di:
 
 * numerazione e ordinamento;
 * conferma della ricezione;
 * ritrasmissione dei dati perduti.
 
-In questo modo i numeri di sequenza restano piccoli e facilmente gestibili
-durante il gioco, senza dover contare i caratteri o preoccuparsi di come
-suddividere una sequenza di byte nei diversi pacchetti.
+In questo modo i numeri di sequenza restano piccoli e facilmente gestibili durante il gioco, senza dover contare i caratteri o preoccuparsi di come suddividere una sequenza di byte nei diversi pacchetti.
 
-TCPigeon non è quindi una riproduzione completa di TCP, ma un modello
-semplificato che permette di sperimentare alcune delle idee fondamentali alla
-base della comunicazione affidabile costruita sopra un servizio di rete che, da
-solo, non offre garanzie di consegna, ordine o assenza di duplicati.
+TCPigeon non è quindi una riproduzione completa di TCP, ma un modello semplificato che permette di sperimentare alcune delle idee fondamentali alla base della comunicazione affidabile costruita sopra un servizio di rete che, da solo, non offre garanzie di consegna, ordine o assenza di duplicati.
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org)
