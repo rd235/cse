@@ -314,3 +314,4 @@ TCPigeon non è quindi una riproduzione completa di TCP, ma un modello semplific
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org)
 
+Attività laboratoriale nell'ambito del percorso [Internet Unplugged](internetunplugged.md)
