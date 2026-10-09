@@ -168,9 +168,7 @@ Il sindacato dei piccioni propone una soluzione: le informazioni sulle parole gi
 
 Inoltre, se il principe e la principessa hanno una fitta corrispondenza, la conferma delle parole ricevute può essere aggiunta ai normali messaggi in uscita.
 
-### Invio di un messaggio
-
-Quando un ufficiale riceve dal principe o dalla principessa una sequenza di parole da spedire, inserisce le parole nella tabella **in uscita**, assegnando a ciascuna un numero progressivo.
+### Tabelle degli ufficiali
 
 Ogni ufficiale mantiene:
 
@@ -183,6 +181,11 @@ Entrambe le tabelle hanno una riga per ogni parola, contenente il numero di sequ
 
 Le righe della tabella **in uscita** contengono inoltre il campo per la ritrasmissione, nel quale viene aggiunto un *tick* per ogni minuto di attesa della conferma.
 
+### Invio di un messaggio
+
+Quando un ufficiale riceve dal principe o dalla principessa una sequenza di parole da spedire, inserisce le parole nella tabella **in uscita**, assegnando a ciascuna un numero progressivo.
+
+Ogni ufficiale mantiene:
 ### Ricezione di un piccione
 
 Quando arriva un piccione, l'ufficiale:
