@@ -185,7 +185,6 @@ Le righe della tabella **in uscita** contengono inoltre il campo per la ritrasmi
 
 Quando un ufficiale riceve dal principe o dalla principessa una sequenza di parole da spedire, inserisce le parole nella tabella **in uscita**, assegnando a ciascuna un numero progressivo.
 
-Ogni ufficiale mantiene:
 ### Ricezione di un piccione
 
 Quando arriva un piccione, l'ufficiale:
